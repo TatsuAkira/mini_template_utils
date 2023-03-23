@@ -1,0 +1,106 @@
+{
+    "workbench.editor.enablePreview": false,
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorBlinking": "expand",
+    "editor.formatOnType": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.jsxBracketSameLine": true,
+    "editor.detectIndentation": false,
+    // "vetur.format.defaultFormatterOptions": {
+    //     "prettier": {
+    //         // 格式化加分号吗
+    //         "semi": true, // true:末尾加分号 false:末尾不加分号
+    //         // 格式化为单引号
+    //         "singleQuote": true // true:单引号 false:双引号
+    //     }
+    // },
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    // "vetur.format.defaultFormatter.js": "vscode-typescript",
+    // 使用eslint自动保存格式化vue文件 , 会和vscode原始保存项冲突 ,
+    // 如果需要格式化vue文件需要:"editor.formatOnSave": false
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // 配置eslint生效的文件扩展，包括vue
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".ts",
+            ".vue",
+            ".html",
+            "json"
+        ]
+    },
+    "eslint.validate": [
+        "javascript",
+        "html",
+        "vue",
+        "javascriptreact",
+        "typescriptreact",
+        "typescript",
+    ],
+    "prettier.semi": false, //#是否显示代码最后一行的分号
+    "prettier.singleQuote": true, //#使用带引号替代双引号
+    "explorer.confirmDelete": false,
+    "[html]": {
+        // "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    // -------------------注意:用vue脚手架的时候注掉,写普通js的时候解开
+    "[javascript]": {
+        "editor.formatOnSave": true, // ❗️
+        // "editor.formatOnSave": false, // ❗️
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    // ------------------------------------------------
+    "editor.snippetSuggestions": "top",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "git.enableSmartCommit": true,
+    "editor.formatOnSave": false, 
+    "git.autofetch": true,
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    //   "minapp-vscode.disableAutoConfig": true,
+    "workbench.colorTheme": "Dracula",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.confirmSync": false,
+    "turboConsoleLog.quote": "'",
+    "search.actionsPosition": "auto",
+    "security.workspace.trust.untrustedFiles": "open",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "tabnine.experimentalAutoImports": true,
+    "editor.guides.bracketPairs": "active",
+    "EnglishChineseDictionary.enableHover": true,
+    "varTranslation.baiduSecret": "20221014001392574,tpl3B0lxxF_tmzYkVlPn",
+    "varTranslation.translationEngine": "tencent",
+    "varTranslation.tencentSecret": "AKIDGMCm58vgPvSr1ua2FBsJTNF0XorikbHl,Xqs41jDRQ8au2uY1JMAZljW5QYS7YljR",
+    "workbench.iconTheme": "bravato-icons",
+    "git.openRepositoryInParentFolders": "always",
+    "editor.accessibilitySupport": "off",
+    "volar.inlayHints.eventArgumentInInlineHandlers": false,
+    "files.autoSave": "afterDelay",
+}
