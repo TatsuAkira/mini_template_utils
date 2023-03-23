@@ -1,0 +1,12 @@
+
+/node_modules
+/.vscode
+/build
+/.history
+.idea
+*.DS_Store
+*.log*
+report.*.json
+
+appConfig.js
+
