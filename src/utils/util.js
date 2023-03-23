@@ -189,3 +189,18 @@ export const debounce = (function () {
     }
   }
 })()
+
+/**
+ *
+ * @param {*} originData   把原始对象转成formdata格式，暂时仅支持1层
+ * @returns
+ */
+export const convertToFormData = (originData) => {
+  const formData = new FormData()
+  Object.keys(originData).forEach((key) => {
+    console.log('appenditem', key)
+    formData.append(key, originData[key])
+  })
+  console.log(formData)
+  return formData
+}
