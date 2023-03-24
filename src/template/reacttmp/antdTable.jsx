@@ -70,6 +70,7 @@ export const antdTable = () => {
         columns={columns}
         dataSource={dataSource}
         pagination={{
+          size: 'small',
           total: 100,
           current: search.pageNum,
           pageSize: search.pageSize,
