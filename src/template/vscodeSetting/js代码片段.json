@@ -1,0 +1,77 @@
+{
+  "Print to console": {
+    "prefix": "ll",
+    "body": ["console.log('$1',$2)"],
+    "description": "Log output to console"
+  },
+  "Print to trycatch": {
+    "prefix": "tr",
+    "body": [
+      "    try {",
+      "      const res = await service.$2(`$3`)",
+      "      const { msg, data, success } = res",
+      "      if (success) {",
+      "      } else {",
+      "      }",
+      "    } catch (error) {",
+      "      console.log('~ error:', error)",
+      "    }",
+      "  },"
+    ],
+    "description": "try catch"
+  },
+  "异步fn": {
+    "prefix": "ybfn",
+    "body": [
+      "async $1 (){",
+      "    try {",
+      "      const res = await service.$2(`$3`)",
+      "      const { msg, data, success } = res",
+      "      if (success) {",
+      "      } else {",
+      "        .error({",
+      "          title: '错误',",
+      "          message: msg || '获取数据错误',",
+      "        })",
+      "      }",
+      "    } catch (error) {",
+      "      console.log('~ error:', error)",
+      "    }",
+      "  },"
+    ],
+    "description": "Log output to console"
+  },
+  "普通fn": {
+    "prefix": "ptfn",
+    "body": ["const $1 = ($2) => {", "$3", "}"],
+    "description": "Log output to console"
+  },
+  "国际化trans": {
+    "prefix": "ta",
+    "body": ["<Trans>$1</Trans>"],
+    "description": "国际化trans"
+  },
+  "t``": {
+    "prefix": "tt",
+    "body": ["t`$1`"],
+    "description": "国际化t"
+  },
+  "reatemp``": {
+    "prefix": "reatemp",
+    "body": [
+      "import React, { useState, useEffect } from 'react'",
+      "import { Spin } from 'antd'",
+      "import { PlusCircleOutlined, SearchOutlined } from '@ant-design/icons'",
+      "import { t, Trans } from '@lingui/macro'",
+      "const ${TM_FILENAME_BASE} = (props) => {",
+      "const [loading, setLoading] = useState(true)",
+      "useEffect(() => {",
+      "    return () => {}",
+      "}, [])",
+      "return <Spin spinning={loading} tip={t`正在加载数据，请稍候...`}></Spin>",
+      "}",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "reactHooks模版"
+  }
+}
