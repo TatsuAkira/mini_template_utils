@@ -67,6 +67,7 @@ export const antdTable = () => {
   return (
     <div>
       <Table
+        rowKey='id'
         columns={columns}
         dataSource={dataSource}
         pagination={{
