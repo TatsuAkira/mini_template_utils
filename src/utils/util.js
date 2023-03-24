@@ -62,12 +62,29 @@ export const deepCopy = (newobj, oldobj) => {
 // deepCopy(newobj, oldobj)
 // console.log('newobj', newobj.b[0].b)
 
-// 快速生成mock数据
-export const generateArray = () => {
-  return Array.from(new Array(1000)).map(
-    (item, index) => `mock列表数据${index}`
-  )
+// 快速生成mock数组
+const names = [
+  'Alice',
+  'Bob',
+  'Charlie',
+  'David',
+  'Emily',
+  'Frank',
+  'Gina',
+  'Hank',
+  'Iris',
+  'Jack',
+]
+const genders = [1, 2, 3]
+function generateRandomObject() {
+  const name = names[Math.floor(Math.random() * names.length)]
+  const uniqueCode = Math.floor(Math.random() * 100000)
+  const gender = genders[Math.floor(Math.random() * genders.length)]
+  const age = Math.floor(Math.random() * 80) + 18 // 年龄在18到98岁之间
+  return { name, uniqueCode, gender, age }
 }
+
+export const arr = new Array(50).fill().map(generateRandomObject)
 
 // 参数是一组有次数的值
 // function f ([x, y, z]) {
