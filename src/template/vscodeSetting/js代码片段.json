@@ -1,9 +1,5 @@
 {
-    "Print to console": {
-      "prefix": "ll",
-      "body": ["console.log('$1',$2)"],
-      "description": "Log output to console"
-    },
+
     "Print to trycatchReact": {
       "prefix": "tr",
       "body": [
@@ -14,72 +10,6 @@
         "  },"
       ],
       "description": "try catch"
-    },
-    "Print to trycatchVue": {
-      "prefix": "trv",
-      "body": [
-        "    try {",
-        "      const res = await service.$2(`$3`)",
-        "      const { msg, data, success } = res",
-        "      if (success) {",
-        "      } else {",
-        "        this.$notify.error({",
-        "          title: '错误',",
-        "          message: msg || '获取数据错误',",
-        "        })",
-        "      }",
-        "    } catch (error) {",
-        "      console.log('~ error:', error)",
-        "    }"
-      ],
-      "description": "try catch"
-    },
-    "异步ReactFn": {
-      "prefix": "ybreact",
-      "body": [
-        "const $1 =async () =>{",
-        "    try {",
-        "      const res = await $2.$3(`$4`)",
-        "      const { message , data, success } = res",
-        "      if (success) {",
-        "      } else {",
-        "        notification.error({",
-        "          message: '错误',",
-        "          description: message || '获取数据错误',",
-        "        })",
-        "      }",
-        "    } catch (error) {",
-        "      console.log('~ error:', error)",
-        "    }",
-        "  },"
-      ],
-      "description": "Log output to console"
-    },
-    "异步vuetFunction": {
-      "prefix": "ybvue",
-      "body": [
-        "async $1 (){",
-        "    try {",
-        "      const res = await service.$2(`$3`)",
-        "      const { msg, data, success } = res",
-        "      if (success) {",
-        "      } else {",
-        "        this.$notify.error({",
-        "          title: '错误',",
-        "          message: msg || '获取数据错误',",
-        "        })",
-        "      }",
-        "    } catch (error) {",
-        "      console.log('~ error:', error)",
-        "    }",
-        "  },"
-      ],
-      "description": "Log output to console"
-    },
-    "普通fn": {
-      "prefix": "ptfn",
-      "body": ["const $1 = ($2) => {", "$3", "}"],
-      "description": "Log output to console"
     },
     "国际化trans": {
       "prefix": "ta",
@@ -108,6 +38,44 @@
         "export default ${TM_FILENAME_BASE}"
       ],
       "description": "reactHooks模版"
-    }
+    },
+    "Print to console": {
+		"prefix": "pp",
+		"body": [
+			"console.log('$1',$2);"
+		],
+		"description": "Log output to console"
+	},
+    "普通函数": {
+		"prefix": "fn",
+		"body": [
+            "// $1",
+            "$2 = ($3) => {",
+            "}"
+		]
+	},
+    "异步函数": {
+		"prefix": "fns",
+		"body": [
+            "// $1",
+            "$2 = async ($3) => {",
+            "   try {",
+            "const params = {",
+            " ",
+            "}",
+            "console.log('params', params);",
+            "const res= await request.get('',params)",
+            "   } catch (error) {",
+            "console.log(error);",
+            "   }",
+            "}"
+		]
+	},
+    "import request": {
+		"prefix": "impr",
+		"body": [
+            "import request from '@/api/axios';"
+		]
+	}
   }
   
